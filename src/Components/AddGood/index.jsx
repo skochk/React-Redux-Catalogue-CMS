@@ -5,7 +5,7 @@ import {useSelector ,useDispatch} from "react-redux";
 import {addGood as addGoodAction} from '../../actions/goodsAction';
 import ReactCrop from 'react-image-crop';
 import 'react-image-crop/dist/ReactCrop.css';
-
+import {Redirect} from 'react-router-dom';
 
 
 export default function(props){
@@ -80,6 +80,8 @@ export default function(props){
     let dispatch = useDispatch();
     let categories = useSelector(state=>state.categoryReducer.categories);
     let subcategories = useSelector(state=>state.subcategoryReducer.subcategories);
+    let status = useSelector(state=>state.goodsReducer.uploadGoodStatus);
+    let statusText = useSelector(state=>state.goodsReducer.statusText);
     let [formDataObject,changeFormDataObject] = useState({name:'',displayName:"",shortDescription:"",idSubcategory:"",idCategory:"",description:"",mainPhoto1:null,photo1:null,price:"",displayPositionInCategory:"",displayPositionInSubcategory:""});
     let [photoPreviewList, setPhotoPreviewList] = useState([]); //preview photos array
     const [upImg, setUpImg] = useState(); //prop img for set crop
@@ -102,6 +104,8 @@ export default function(props){
     }
     const [formError,setFormError] = useState();
     const [errors,setErrors] = useState({});
+
+
     const handleInput = (e)=>{      
         setFormError(false);  
         if(e.target.name === 'mainPhoto1'){
@@ -260,7 +264,7 @@ export default function(props){
         setErrors(tempObj);
         console.log(errors);
 
-        if(isOK){ // send req uest if no errors
+        if(isOK){ // send request if no errors
             console.log('request will be sent');
             let formData = new FormData();
             Object.keys(formDataObject).forEach(key=>{
@@ -328,9 +332,13 @@ export default function(props){
     const onLoad = useCallback(img => {
         setImgRef(img);
     }, []);
-    
+    useEffect(()=>{
+        console.log('status',status);
+
+    },[status])
     return (
-        <div className={classes.fullArea}> 
+        <div className={classes.fullArea}>
+        {status == "success" ? <Redirect to='/goods'/> : null}
              <FormControl required component="fieldset" error={formError} className={classes.inputs}>
                 <TextField required error={errors.name} helperText={errors.name ? errorHelperText.name : null} id="name" label="Name" name="name" onChange={handleInput} className={classes.inputStyle}/>
                 <TextField  id="displayName" required  error={errors.displayName} helperText={errors.displayName ? errorHelperText.displayName : null} label="Display Name" name="displayName" onChange={handleInput} className={classes.inputStyle} />

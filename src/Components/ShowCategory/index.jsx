@@ -61,7 +61,7 @@ export default function(){
   return (
     <div style={{ width: "100%" }}>
       {/* dev buttons */}
-      <button onClick={()=>{dispatch(addCategory(temData))}}>quick add</button>
+      {/* <button onClick={()=>{dispatch(addCategory(temData))}}>quick add</button> */}
       <Alert props={obj}/>
 
       <MaterialTable  

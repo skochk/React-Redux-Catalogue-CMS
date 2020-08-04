@@ -8,7 +8,7 @@ import ShowCategory from './Components/ShowCategory';
 import ShowSubcategory from './Components/ShowSubcategory';
 import AddGood from './Components/AddGood';
 import Goods from './Components/Goods';
-import { BrowserRouter, Switch, Route, Link , browserHistory} from "react-router-dom";
+import { HashRouter as BrowserRouter, Switch, Route, Link , browserHistory} from "react-router-dom";
 import { createBrowserHistory } from 'history';
 import { makeStyles , withStyles } from '@material-ui/core/styles';
 

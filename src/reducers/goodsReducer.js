@@ -11,8 +11,9 @@ import update from 'immutability-helper';
 
 
 const initialState = {
-    goods: [],
-    status: 'error' // loading/success/error
+    goods: [], 
+    status: 'error', // loading/success/error
+    uploadGoodStatus:'error'
 }
 
 export default function(state=initialState, action){
@@ -36,7 +37,7 @@ export default function(state=initialState, action){
         case GOODS_SUCC_ADD:
             return update(state,{
                 goods:{$push:action.newGood},
-                goodStatus:{$set: "success"}
+                uploadGoodStatus:{$set: "success"}
             })
         case GOODS_ADD_ELEM:
             let valid = true;

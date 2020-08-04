@@ -5,24 +5,19 @@ import { Alert as muiAlert} from '@material-ui/lab';
 export default function (props) {
   let timer; 
   let call = function(){ 
-    // console.log('called');
     timer = setTimeout(() => {
-      // console.log('closed by timeout');
       opener(false); 
     }, 5000);
   };
 
   useEffect(()=>{
-    // console.log('got new props');
     opener(true);
     call();
     return () =>{
-      // console.log('Alert unmounted');
       clearTimeout(timer);
     }
   },[props]);
 
-  // console.log(props);
   const [isOpen, opener] = useState(false);
   const Alert = withStyles({ 
     root:{    

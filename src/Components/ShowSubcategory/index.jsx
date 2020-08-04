@@ -64,13 +64,7 @@ export default function(){
     }
     categoriesIDs.forEach((key, i) => lookup[key] = categoriesNames[i]);
   }
-  let temData = {
-    name: 'gatika',
-    displayName: '11',
-    idCategory: '123213213213213213213213',
-    description:'eeeeeeeee weipfwfwefpwefwe ewfipwefpfwepifjwep ewfewjpfwepfjwef wefwefwefwef',
-    shortDescription: 'asdada',
-    displayPosition: '1',};
+
     let obj = {"status":status,"statusText":statusText};
 
     
