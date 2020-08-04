@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/React-Redux-Catalogue-CMS/static/css/main.d1b05096.chunk.css",
+    "main.js": "/React-Redux-Catalogue-CMS/static/js/main.52df60e5.chunk.js",
+    "main.js.map": "/React-Redux-Catalogue-CMS/static/js/main.52df60e5.chunk.js.map",
+    "runtime-main.js": "/React-Redux-Catalogue-CMS/static/js/runtime-main.68fda5fc.js",
+    "runtime-main.js.map": "/React-Redux-Catalogue-CMS/static/js/runtime-main.68fda5fc.js.map",
+    "static/css/2.f7e5fa38.chunk.css": "/React-Redux-Catalogue-CMS/static/css/2.f7e5fa38.chunk.css",
+    "static/js/2.3793f0f9.chunk.js": "/React-Redux-Catalogue-CMS/static/js/2.3793f0f9.chunk.js",
+    "static/js/2.3793f0f9.chunk.js.map": "/React-Redux-Catalogue-CMS/static/js/2.3793f0f9.chunk.js.map",
+    "index.html": "/React-Redux-Catalogue-CMS/index.html",
+    "precache-manifest.a00a3134b897e6f4d13c5dda3ec0f540.js": "/React-Redux-Catalogue-CMS/precache-manifest.a00a3134b897e6f4d13c5dda3ec0f540.js",
+    "service-worker.js": "/React-Redux-Catalogue-CMS/service-worker.js",
+    "static/css/2.f7e5fa38.chunk.css.map": "/React-Redux-Catalogue-CMS/static/css/2.f7e5fa38.chunk.css.map",
+    "static/css/main.d1b05096.chunk.css.map": "/React-Redux-Catalogue-CMS/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.3793f0f9.chunk.js.LICENSE.txt": "/React-Redux-Catalogue-CMS/static/js/2.3793f0f9.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/React-Redux-Catalogue-CMS/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.68fda5fc.js",
+    "static/css/2.f7e5fa38.chunk.css",
+    "static/js/2.3793f0f9.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.52df60e5.chunk.js"
+  ]
+}
